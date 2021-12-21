@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="myFunction()">The Area of a Triangle</button>
+    <h1 id="demo"></h1>
+
+    <script>
+
+        function myFunction() {
+            const side1 = prompt("Please enter side1:");
+            const side2 = prompt("Please enter side2:");
+            const side3 = prompt("Please enter side3:");
+            var s = (side1 + side2 + side3) / 2;
+            var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
+            document.getElementById("demo").innerHTML = "The Area of a Triangle " + area;
+        }
+
+    </script>
+</body>
+
+</html>
