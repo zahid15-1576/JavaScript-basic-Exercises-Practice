@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">Year To Year Sunday Check</button>
+    <h1 id="demo"></h1>
+    <script>
+
+        function myFunction() {
+            var year1 = prompt("Enter your 1st year");
+            var year2 = prompt("Enter your 2nd year");
+            if (year1 < year2) {
+                for (var year = year1; year <= year2; year++) {
+                    var d = new Date(year, 0, 1);
+                    if (d.getDay() === 0)
+                        document.write("1st January is being a Sunday  " + year+ "</br>");
+                }
+            }
+            else {
+                for (var year = year2; year <= year1; year++) {
+                    var d = new Date(year, 0, 1);
+                    if (d.getDay() === 0)
+                    document.write("1st January is being a Sunday  " + year+ "</br>");
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
