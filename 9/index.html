@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myfunction()">Check Remaing Day For Ramjan</button>
+    <h1 id="demo"></h1>
+
+    <script>
+        function myfunction() {
+            var date = new Date();
+            var ram = new Date(date.getFullYear(), 4, 2);
+            if (date.getMonth() == 4 && date.getDate() > 2) {
+                ram.setFullYear(ram.getFullYear() + 1);
+            }
+            var one_day = 1000 * 60 * 60 * 24;
+            document.getElementById("demo").innerHTML = (Math.ceil((ram.getTime() - date.getTime()) / (one_day)) +" days left until Ramdan!");
+        }
+    </script>
+</body>
+
+</html>
