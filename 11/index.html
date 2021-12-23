@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="fa()"> Fahrenheit</button>
+    <button onclick="ce()"> Centigrade</button>
+    <h1 id="Fahrenheit"></h1>
+    
+    <!-- <h1 id="Centigrade"></h1> -->
+
+
+
+
+
+
+    <script>
+        function fa() {
+            var cTemp = prompt("Enter your value: ");
+            var cToFahr = cTemp * 9 / 5 + 32;
+            var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+            document.getElementById("Fahrenheit").innerHTML = (message);
+        }
+
+        function ce(){
+            var fTemp = prompt("Enter your value: ");
+            var fToCel = (fTemp - 32) * 5 / 9;
+            var message = fTemp + '\xB0F is ' + fToCel + '\xB0C.';
+            document.getElementById("Fahrenheit").innerHTML = (message);
+        }
+    </script>
+</body>
+
+</html>
