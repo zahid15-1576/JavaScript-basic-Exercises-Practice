@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        Enter your value: <input type="text" id="Value"> <br>
+        <input type="button" onclick="myfunction()" value="Check">
+    </form>
+    <h1 id="demo"></h1>
+
+    <script>
+        function myfunction() {
+            var x = document.getElementById("Value").value;
+            return ((Math.abs(100 - x) <= 20) ||
+                (Math.abs(400 - x) <= 20));
+            document.getElementById("demo").innerHTML = (myfunction());
+        }
+    </script>
+</body>
+
+</html>
