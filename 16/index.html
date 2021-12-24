@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.g{
+    border: 1px solid gray;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+}
+</style>
+
+<body>
+    <form action="#" class="g">
+        1st Number:   <input type="text" id="f"><br>
+        2nd Number: <input type="text" id="s"><br>
+        <!-- <button onclick="myFunction()" value="Addition"></button> -->
+        <input type="button" onclick="myFunction()" value="Addition"><br>
+    </form>
+    <h1 id="demo"></h1>
+    <script>
+
+        function myFunction() {
+            var num1 = document.getElementById("f").value;
+            var num2 = document.getElementById("s").value;
+            var result;
+            if (num1 == num2) {
+                result = 3 * (num1 + num2);
+                document.getElementById("demo").innerHTML = result;
+            }
+            else {
+                result = (num1 + num2);
+                document.getElementById("demo").innerHTML = result;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
