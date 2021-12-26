@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        border: 1px solid black;
+        width: fit-content;
+        padding: 20px;
+    }
+</style>
+<body>
+    <form action="#">
+        Enter 1st Number: <input type="text" name="" id="First"><br>
+        Enter 2nd Number: <input type="text" name="" id="Sec"><br>
+        Enter 3rd Number: <input type="text" name="" id="thir"><br>
+        <input type="button" onclick="myFunction()" value="Click to Find Greater Number">
+    </form>
+    <p>The Result is : <br>
+        <span id="demo"></span>
+    </p>
+
+    <script>
+        function myFunction(){
+            var num1=document.getElementById("First").value;
+            var num2=document.getElementById("Sec").value;
+            var num3=document.getElementById("thir").value;
+            if(num1>num2 && num1>num3){
+                document.getElementById("demo").innerHTML=num1;
+            }
+            else if(num2>num1 && num2>num3){
+                document.getElementById("demo").innerHTML=num2;
+            }
+            else{
+                document.getElementById("demo").innerHTML=num3;
+            }
+        }
+    </script>
+</body>
+
+</html>
