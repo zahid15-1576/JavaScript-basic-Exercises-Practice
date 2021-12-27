@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 1px solid black;
+            width: fit-content;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        Enter 1st Number: <input type="text" name="" id="First"><br>
+        Enter 2nd Number: <input type="text" name="" id="Sec"><br>
+        Enter 3rd Number: <input type="text" name="" id="thir"><br><br>
+        <!--  Enter 3rd Number: <input type="text" name="" id="thir"><br> -->
+        <input type="button" onclick="check_char()" value="Check Last Digit">
+    </form>
+    <p>The Result is : <br>
+        <span id="demo"></span>
+    </p>
+
+
+    <script>
+        function check_char() {
+            var x = document.getElementById("First").value;
+            var y = document.getElementById("Sec").value;
+            var z = document.getElementById("thir").value;
+
+            if ((x > 0) && y > 0 && z > 0) {
+                document.getElementById("demo").innerHTML = (x % 10 == y % 10 && y % 10 == z % 10 && x % 10 == z % 10);
+            }
+            else {
+                document.getElementById("demo").innerHTML = ("False");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
