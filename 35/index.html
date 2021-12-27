@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid black;
+            width: fit-content;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        Enter String: <input type="text" name="" id="First"><br>
+        Enter Single Char: <input type="text" name="" id="Sec"><br><br>
+        <!--  Enter 3rd Number: <input type="text" name="" id="thir"><br> -->
+        <input type="button" onclick="check_char()" value="Check a Given String">
+    </form>
+    <p>The Result is : <br>
+        <span id="demo"></span>
+    </p>
+
+
+    <script>
+        function check_char() {
+            var str1 = document.getElementById("First").value;
+            var char = document.getElementById("Sec").value;
+            ctr = 0;
+            for (let i = 0; i < str1.length; i++) {
+                if ((str1.charAt(i) == char) && (i >= 1 && i <= 3)) {
+                    ctr = 1;
+                    break;
+                }
+            }
+            if (ctr == 1) {
+                document.getElementById("demo").innerHTML = ("True");
+            }
+            else {
+                document.getElementById("demo").innerHTML = ("False");
+            }
+        }
+    </script>
+</body>
+
+</html>
