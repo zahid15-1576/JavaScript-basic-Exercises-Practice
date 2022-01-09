@@ -8,13 +8,20 @@
     <title>Document</title>
 </head>
 <style>
-    h1{
+    body{
+        background: linear-gradient(45deg, #111 50%, #ffa537 50%);
+        height: 88vh;
+        width: 100vw;
+        text-align: center;
+    }
+    .id {
         font-size: 5rem;
+        color: blueviolet;
     }
 </style>
 
 <body onload="animate_string('target')">
-    <h1 id="target">My Name Is Zahid Hasan </h1>
+    <h1 id="target" class="id">Zahid Hasan </h1>
 
     <script>
         function animate_string(id) {
